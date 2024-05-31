@@ -106,7 +106,7 @@ public class DutyRosterApp {
 
             String[] parts = dateStr.split("-");
             if (parts.length != 3) {
-                System.err.println("日期格式错误，正确的格式为：年-月-日，请重新输入该日期");
+                System.err.println("日期格式错误");
                 continue;
             }
 
