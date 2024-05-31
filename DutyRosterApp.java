@@ -249,13 +249,13 @@ public class DutyRosterApp {
      */
     private static void addEmployee(String name, String position, String phoneNumber) {
         if (!name.matches("[a-zA-Z]+")) {
-            throw new IllegalArgumentException("姓名不能含有数字，请重新输入");
+            throw new IllegalArgumentException("姓名不能包含数字，请重新输入");
         }
         if (!position.matches("[a-zA-Z]+")) {
-            throw new IllegalArgumentException("职务不能含有数字，请重新输入");
+            throw new IllegalArgumentException("职务不能包含数字，请重新输入");
         }
         if (!phoneNumber.matches("[0-9]+")) {
-            throw new IllegalArgumentException("电话号码必须全为数字，请重新输入");
+            throw new IllegalArgumentException("电话号码必须全部是数字，请重新输入");
         }
         for (Employee existingEmployee : PeopleWithStatus.keySet()) {
             if (existingEmployee.getName().equals(name)) {
